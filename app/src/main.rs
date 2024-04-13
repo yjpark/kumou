@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 use log::LevelFilter;
 
-use song_player::app::App;
+use kumou_app::app::App;
 
 fn main() {
     // Init debug
