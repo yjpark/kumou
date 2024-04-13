@@ -33,14 +33,10 @@ watch_path = ["src", "assets"]
 
 style = [
     "css/tailwind.css",
-    "https://vjs.zencdn.net/8.10.0/video-js.css",
 ]
 
 # Javascript code file
 script = [
-    "https://vjs.zencdn.net/8.10.0/video.min.js",
-    "js/youtube-3.0.0.min.js",
-    "https://unpkg.com/wavesurfer.js@7",
 ]
 
 [web.resource.dev]

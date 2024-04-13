@@ -11,8 +11,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // let out_dir = env::var_os("OUT_DIR").unwrap();
     let current_dir = env::current_dir()?;
 
-    let units = Units(1.0);
-
     let classes_path = Path::new(&current_dir).join("classes.html");
     let classes = include!("classes.rs");
     generate_classes(classes_path, classes)?;
