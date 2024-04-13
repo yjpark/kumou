@@ -40,3 +40,6 @@ getrandom = { version = "0.2", features=["wasm-bindgen", "js"] }
 log = "0.4.19"
 dioxus-logger = "0.4.1"
 console_error_panic_hook = "0.1.7"
+
+# Database
+surrealdb = "1.4.0"
