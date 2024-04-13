@@ -1,0 +1,50 @@
+[application]
+
+# App (Project) Name
+name = "kumou_app"
+
+# Dioxus App Default Platform
+# desktop, web
+default_platform = "web"
+
+# `build` & `serve` dist path
+out_dir = "dist"
+
+# resource (assets) file folder
+asset_dir = "assets"
+
+[web.app]
+
+# HTML title tag content
+title = "SONG"
+
+[web.watcher]
+
+# when watcher trigger, regenerate the `index.html`
+reload_html = true
+
+# which files or dirs will be watcher monitoring
+watch_path = ["src", "assets"]
+
+# include `assets` in web platform
+[web.resource]
+
+# CSS style file
+
+style = [
+    "css/tailwind.css",
+    "https://vjs.zencdn.net/8.10.0/video-js.css",
+]
+
+# Javascript code file
+script = [
+    "https://vjs.zencdn.net/8.10.0/video.min.js",
+    "js/youtube-3.0.0.min.js",
+    "https://unpkg.com/wavesurfer.js@7",
+]
+
+[web.resource.dev]
+
+# Javascript code file
+# serve: [dev-server] only
+script = []

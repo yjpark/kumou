@@ -1,0 +1,42 @@
+[workspace.package]
+edition = "2021"
+license = "MIT"
+homepage = "https://github.com/edger-dev/kumou"
+repository = "https://github.com/edger-dev/kumou"
+authors = ["YJ Park <yjpark@gmail.com>"]
+
+[workspace]
+members = [
+    "proto",
+    "app",
+    "app/css",
+]
+
+resolver = "2"
+
+[workspace.dependencies]
+kumou_proto = { path = "proto" }
+kumou_app = { path = "apps/player" }
+
+dioxus = "0.5.0"
+dioxus-daisyui = "0.7.0"
+
+serde = "1.0"
+
+lazy_static = "1.4.0"
+simsearch = "0.2.4"
+
+reqwest = "0.12.3"
+async-recursion = "1.1.0"
+futures = "0.3.30"
+snafu = "0.8.2"
+
+dioxus-free-icons = { version = "0.8", features = ["feather"] }
+
+# dx serve produce an error without this.
+getrandom = { version = "0.2", features=["wasm-bindgen", "js"] }
+
+# Debug
+log = "0.4.19"
+dioxus-logger = "0.4.1"
+console_error_panic_hook = "0.1.7"
