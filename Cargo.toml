@@ -8,6 +8,8 @@ authors = ["YJ Park <yjpark@gmail.com>"]
 [workspace]
 members = [
     "proto",
+    "grammar",
+    "japanese",
     "model",
     "app",
     "app/css",
@@ -16,7 +18,9 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-kumou_proto = { path = "proto" }
+kumou_photo = { path = "proto" }
+kumou_grammar = { path = "grammar" }
+kumou_japanese = { path = "japanese" }
 kumou_model = { path = "model" }
 kumou_app = { path = "app" }
 
