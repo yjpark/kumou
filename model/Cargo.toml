@@ -1,5 +1,5 @@
 [package]
-name = "kumou_proto"
+name = "kumou_model"
 version = "0.1.0"
 publish = false
 
@@ -13,4 +13,4 @@ authors.workspace = true
 
 [dependencies]
 
-serde = { workspace = true }
+kumou_proto = { workspace = true }
