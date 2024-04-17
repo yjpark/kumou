@@ -1,5 +1,5 @@
 [package]
-name = "kumou_surreal"
+name = "kumou_model"
 version = "0.1.0"
 publish = false
 
@@ -13,4 +13,5 @@ authors.workspace = true
 
 [dependencies]
 
-kumou_proto = { workspace = true }
+serde = { workspace = true }
+surrealdb = { workspace = true }

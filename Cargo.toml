@@ -7,10 +7,9 @@ authors = ["YJ Park <yjpark@gmail.com>"]
 
 [workspace]
 members = [
-    "proto",
     "grammar",
     "japanese",
-    "surreal",
+    "model",
     "app",
     "app/css",
 ]
@@ -18,10 +17,9 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-kumou_proto = { path = "proto" }
 kumou_grammar = { path = "grammar" }
 kumou_japanese = { path = "japanese" }
-kumou_surreal = { path = "surreal" }
+kumou_model = { path = "model" }
 kumou_app = { path = "app" }
 
 dioxus = "0.5.0"
@@ -47,8 +45,5 @@ log = "0.4.19"
 dioxus-logger = "0.4.1"
 console_error_panic_hook = "0.1.7"
 
-# proto
-uuid = { version = "1.2", features = ["serde", "v4"] }
-
-# Database
+# model 
 surrealdb = "1.4.0"
