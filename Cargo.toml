@@ -18,7 +18,7 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-kumou_photo = { path = "proto" }
+kumou_proto = { path = "proto" }
 kumou_grammar = { path = "grammar" }
 kumou_japanese = { path = "japanese" }
 kumou_model = { path = "model" }
