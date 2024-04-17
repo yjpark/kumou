@@ -1,5 +1,5 @@
 [package]
-name = "kumou_model"
+name = "kumou_surreal"
 version = "0.1.0"
 publish = false
 
