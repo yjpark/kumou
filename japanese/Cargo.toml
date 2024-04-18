@@ -14,3 +14,4 @@ authors.workspace = true
 [dependencies]
 
 kumou_proto = { workspace = true }
+serde = { workspace = true }

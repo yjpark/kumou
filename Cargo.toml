@@ -25,7 +25,7 @@ kumou_app = { path = "app" }
 dioxus = "0.5.0"
 dioxus-daisyui = "0.7.0"
 
-serde = "1.0"
+serde = { version = "1.0", features = ["derive", "alloc"] }
 
 lazy_static = "1.4.0"
 simsearch = "0.2.4"
