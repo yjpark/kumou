@@ -7,3 +7,4 @@ pub struct Clause {
     pub text: String,
     pub pieces: Vec<Piece>,
 }
+

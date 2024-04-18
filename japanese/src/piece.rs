@@ -9,9 +9,3 @@ pub enum Piece {
     Match(Match),
     Clause(Clause),
 }
-
-#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-pub struct Match {
-    pub pattern: Pattern,
-    pub segments: Vec<Piece>,
-}
