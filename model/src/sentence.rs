@@ -1,9 +1,9 @@
 use serde::{Deserialize, Serialize};
-use uuid::Uuid;
+
+use crate::prelude::*;
 
 #[derive(Clone, PartialEq, Eq, Serialize, Deserialize, Debug)]
 pub struct Sentence {
-    pub uuid: Uuid,
-    pub section: Uuid,
+    pub section: Option<Id>,
     pub content: String,
 }

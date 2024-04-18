@@ -1,8 +1,8 @@
 pub mod sentence;
 pub mod section;
 
-pub use uuid;
+pub use surrealdb;
 
 pub mod prelude {
-    pub use uuid::Uuid;
+    pub use surrealdb::Id;
 }
