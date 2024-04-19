@@ -1,5 +1,3 @@
-pub use unic_langid;
-
 pub mod word;
 pub mod clause;
 pub mod piece;
@@ -8,8 +6,6 @@ pub mod sentence;
 pub mod section;
 
 pub mod prelude {
-    pub use unic_langid::LanguageIdentifier;
-
     pub use crate::sentence::Sentence;
     pub use crate::section::Section;
     pub use crate::word::Word;

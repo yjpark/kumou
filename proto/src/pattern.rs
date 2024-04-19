@@ -1,3 +1,4 @@
+use std::fmt::Display;
 use serde::{Deserialize, Serialize};
 
 use crate::prelude::*;
@@ -33,6 +34,9 @@ pub struct Match {
 }
 
 impl Pattern {
+    pub const WILDCAST_ID: &'static str = "*";
+    pub const SEPARATOR_ID: &'static str = " ";
+
     pub fn to_pieces(&self) -> Vec<PatternPiece> {
         match self {
             Pattern::Prefix(word) => vec![
@@ -49,6 +53,15 @@ impl Pattern {
                 PatternPiece::Text,
             ],
             Pattern::Complex(pieces) => pieces.clone(),
+        }
+    }
+}
+
+impl PatternPiece {
+    pub fn id(&self) -> &str {
+        match self {
+            PatternPiece::Word(word) => word.id(),
+            PatternPiece::Text => Pattern::WILDCAST_ID,
         }
     }
 }
