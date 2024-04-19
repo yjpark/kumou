@@ -14,5 +14,4 @@ authors.workspace = true
 [dependencies]
 
 kumou_proto = { workspace = true }
-serde = { workspace = true }
-unic-langid = { workspace = true }
+lazy_static = { workspace = true }

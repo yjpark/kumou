@@ -1,10 +1,15 @@
-use std::fmt::Display;
 use serde::{Deserialize, Serialize};
 
 use crate::prelude::*;
 
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-pub enum Pattern {
+pub struct Pattern {
+    pub id: String,
+    pub pieces: PatternPieces,
+}
+
+#[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+pub enum PatternPieces {
     Prefix(Word),
     Suffix(Word),
     Infix(Word),
@@ -33,35 +38,57 @@ pub struct Match {
     pub pieces: Vec<Piece>,
 }
 
-impl Pattern {
-    pub const WILDCAST_ID: &'static str = "*";
-    pub const SEPARATOR_ID: &'static str = " ";
-
-    pub fn to_pieces(&self) -> Vec<PatternPiece> {
-        match self {
-            Pattern::Prefix(word) => vec![
-                PatternPiece::Word(word.clone()),
-                PatternPiece::Text,
-            ],
-            Pattern::Suffix(word) => vec![
-                PatternPiece::Text,
-                PatternPiece::Word(word.clone()),
-            ],
-            Pattern::Infix(word) => vec![
-                PatternPiece::Text,
-                PatternPiece::Word(word.clone()),
-                PatternPiece::Text,
-            ],
-            Pattern::Complex(pieces) => pieces.clone(),
-        }
-    }
-}
-
 impl PatternPiece {
     pub fn id(&self) -> &str {
         match self {
             PatternPiece::Word(word) => word.id(),
             PatternPiece::Text => Pattern::WILDCAST_ID,
         }
+    }
+}
+
+impl Pattern {
+    pub const WILDCAST_ID: &'static str = "*";
+    pub const SEPARATOR_ID: &'static str = " ";
+
+    pub fn new(pieces: PatternPieces) -> Self {
+        let id = pieces.id();
+        Self {
+            id,
+            pieces,
+        }
+    }
+
+    pub fn id(&self) -> &str {
+        &self.id
+    }
+}
+
+impl PatternPieces {
+    pub fn to_pieces(&self) -> Vec<PatternPiece> {
+        match self {
+            PatternPieces::Prefix(word) => vec![
+                PatternPiece::Word(word.clone()),
+                PatternPiece::Text,
+            ],
+            PatternPieces::Suffix(word) => vec![
+                PatternPiece::Text,
+                PatternPiece::Word(word.clone()),
+            ],
+            PatternPieces::Infix(word) => vec![
+                PatternPiece::Text,
+                PatternPiece::Word(word.clone()),
+                PatternPiece::Text,
+            ],
+            PatternPieces::Complex(pieces) => pieces.clone(),
+        }
+    }
+
+    pub fn id(&self) -> String {
+        self.to_pieces()
+            .into_iter()
+            .map(|x| x.id().to_owned())
+            .collect::<Vec<String>>()
+            .join(Pattern::SEPARATOR_ID)
     }
 }
