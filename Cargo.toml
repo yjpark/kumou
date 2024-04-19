@@ -26,6 +26,7 @@ dioxus = "0.5.0"
 dioxus-daisyui = "0.7.0"
 
 serde = { version = "1.0", features = ["derive", "alloc"] }
+unic-langid = { version = "0.9", features = [ "macros", "serde" ] }
 
 lazy_static = "1.4.0"
 simsearch = "0.2.4"

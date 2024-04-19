@@ -6,4 +6,5 @@ use crate::prelude::*;
 pub struct Sentence {
     pub section_id: Option<String>,
     pub text: String,
+    pub clauses: Vec<Clause>,
 }
