@@ -4,7 +4,7 @@ use crate::prelude::*;
 lazy_static! {
     pub static ref WA: Word = Word::new("は");
 
-    pub static ref GA: Word = Word::new("が")
+    pub static ref GA: Word = Word::new("が");
     pub static ref O: Word = Word::new("を");
 
     pub static ref TO: Word = Word::new("と");

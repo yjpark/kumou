@@ -16,3 +16,12 @@ pub enum WordClass {
 
 // 動詞、形容詞、形容動詞、名詞、副詞、連體詞、接續詞、感動詞、助動詞、助詞
 
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
+pub enum PatternClass {
+    Unknown,
+    Noun,
+    Verb,
+    Adjective,
+    Adverb,
+}
+

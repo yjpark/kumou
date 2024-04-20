@@ -11,5 +11,5 @@ pub mod prelude {
     pub use crate::word::Word;
     pub use crate::clause::Clause;
     pub use crate::piece::Piece;
-    pub use crate::pattern::{Pattern, PatternPiece, Match};
+    pub use crate::pattern::{Pattern, PatternPieces, PatternPiece, Match};
 }

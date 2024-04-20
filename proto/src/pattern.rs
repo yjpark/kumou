@@ -16,15 +16,6 @@ pub enum PatternPieces {
     Complex(Vec<PatternPiece>),
 }
 
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
-pub enum PatternClass {
-    Unknown,
-    Noun,
-    Verb,
-    Adjective,
-    Adverb,
-}
-
 #[derive(Clone, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub enum PatternPiece {
     Word(Word),
