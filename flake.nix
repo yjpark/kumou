@@ -1,5 +1,5 @@
 {
-  description = "amateurguitar toolbox";
+  description = "kumou";
 
   inputs = {
     nixpkgs.url      = "github:NixOS/nixpkgs/nixpkgs-unstable";
