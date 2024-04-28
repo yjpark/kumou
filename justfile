@@ -10,4 +10,5 @@ serve-doc:
 install-dioxus-cli:
     cargo install dioxus-cli
 
-
+install-sea-orm-cli:
+    cargo install sea-orm-cli
