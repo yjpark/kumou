@@ -1,14 +1,14 @@
 build:
     cargo build
 
-build-doc:
-    cargo doc --no-deps
+generate-entity:
+    sea generate entity --output-dir model/src/entity/
 
-serve-doc:
-    simple-http-server -p 8001 --index --nocache target/doc
+pgcli:
+    pgcli $DATABASE_URL
 
 install-dioxus-cli:
     cargo install dioxus-cli
 
 install-sea-orm-cli:
-    cargo install sea-orm-cli
+    cargo install sea-orm-cli@=1.0.0-rc.3

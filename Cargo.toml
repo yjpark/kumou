@@ -10,6 +10,7 @@ members = [
     "proto",
     "japanese",
     "model",
+    "migration",
     "app",
     "app/css",
 ]
@@ -19,6 +20,7 @@ resolver = "2"
 [workspace.dependencies]
 kumou_proto = { path = "proto" }
 kumou_japanese = { path = "japanese" }
+kumou_migration = { path = "migration" }
 kumou_model = { path = "model" }
 kumou_app = { path = "app" }
 
@@ -47,4 +49,5 @@ dioxus-logger = "0.4.1"
 console_error_panic_hook = "0.1.7"
 
 # DB
-sea-orm = { version = "1.0", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros", "with-chrono", "with-uuid" ] }
+sea-orm = { version = "1.0.0-rc.3", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros", "with-chrono", "with-uuid" ] }
+sea-orm-migration = { version = "1.0.0-rc.3", features = [ "sqlx-postgres", "runtime-tokio-rustls", "with-chrono", "with-uuid" ] }
