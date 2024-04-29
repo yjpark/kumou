@@ -1,8 +1,14 @@
 build:
     cargo build
 
+migrate-status:
+    sea migrate status
+
+migrate-up:
+    sea migrate up
+
 generate-entity:
-    sea generate entity --output-dir model/src/entity/
+    sea generate entity --with-serde both --output-dir model/src/entity/
 
 pgcli:
     pgcli $DATABASE_URL
