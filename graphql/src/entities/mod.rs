@@ -2,4 +2,4 @@
 
 pub mod prelude;
 
-pub mod sentences;
+pub mod sentence;
