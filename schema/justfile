@@ -1,5 +1,12 @@
+status:
+    psql $DATABASE_URL -c "select * from refinery_schema_history"
+
 migrate:
     refinery migrate -e DATABASE_URL
 
 install-refinery_cli:
     cargo install refinery_cli
+
+pgcli:
+    pgcli $DATABASE_URL
+

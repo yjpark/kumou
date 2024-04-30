@@ -39,7 +39,8 @@
             nodePackages.npm
             nodePackages.tailwindcss
             # backend, db
-            supabase-cli
+            pgcli
+            postgresql
           ];
           shellHook = ''
             alias c=cargo

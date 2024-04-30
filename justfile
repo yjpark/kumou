@@ -1,21 +1,12 @@
 build:
     cargo build
 
-migrate-status:
-    sea migrate status
-
-migrate-up:
-    sea migrate up
-
 generate-entities:
     sea generate entity --with-serde both --ignore-tables refinery_schema_history --output-dir model/src/entities/
 
 generate-graphql:
     sea generate entity --seaography --ignore-tables refinery_schema_history --output-dir graphql/src/entities/
     seaography-cli graphql graphql/src/entities $DATABASE_URL kumou_graphql
-
-pgcli:
-    pgcli $DATABASE_URL
 
 install-dioxus-cli:
     cargo install dioxus-cli
