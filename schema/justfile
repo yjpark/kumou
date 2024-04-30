@@ -1,0 +1,5 @@
+migrate:
+    refinery migrate
+
+install-refinery_cli:
+    cargo install refinery_cli

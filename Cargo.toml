@@ -10,7 +10,6 @@ members = [
     "proto",
     "japanese",
     "model",
-    "migration",
     "app",
     "app/css",
 ]
@@ -20,7 +19,6 @@ resolver = "2"
 [workspace.dependencies]
 kumou_proto = { path = "proto" }
 kumou_japanese = { path = "japanese" }
-kumou_migration = { path = "migration" }
 kumou_model = { path = "model" }
 kumou_app = { path = "app" }
 

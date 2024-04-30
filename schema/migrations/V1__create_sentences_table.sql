@@ -1,0 +1,4 @@
+CREATE TABLE sentences (
+    id BIGSERIAL PRIMARY KEY,
+    text TEXT NOT NULL
+);
