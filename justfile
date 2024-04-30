@@ -8,10 +8,10 @@ migrate-up:
     sea migrate up
 
 generate-entities:
-    sea generate entity --with-serde both --seaography --output-dir model/src/entities/
+    sea generate entity --with-serde both --ignore-tables refinery_schema_history --output-dir model/src/entities/
 
 generate-graphql:
-    sea generate entity --seaography --output-dir graphql/src/entities/
+    sea generate entity --seaography --ignore-tables refinery_schema_history --output-dir graphql/src/entities/
     seaography-cli graphql graphql/src/entities $DATABASE_URL kumou_graphql
 
 pgcli:
