@@ -38,6 +38,8 @@
             nodejs
             nodePackages.npm
             nodePackages.tailwindcss
+            # backend, db
+            supabase-cli
           ];
           shellHook = ''
             alias c=cargo

@@ -1,5 +1,5 @@
-pub mod entity;
+pub mod entities;
 
 pub mod prelude {
-    pub use crate::entity::prelude as entity;
+    pub use crate::entities::prelude as entities;
 }

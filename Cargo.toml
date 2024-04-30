@@ -49,5 +49,5 @@ dioxus-logger = "0.4.1"
 console_error_panic_hook = "0.1.7"
 
 # DB
-sea-orm = { version = "1.0.0-rc.3", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros", "with-chrono", "with-uuid" ] }
+sea-orm = { version = "1.0.0-rc.3", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros" ] }
 sea-orm-migration = { version = "1.0.0-rc.3", features = [ "sqlx-postgres", "runtime-tokio-rustls" ] }
