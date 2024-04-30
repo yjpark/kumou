@@ -8,7 +8,7 @@ CREATE TABLE sentence (
 
 CREATE INDEX idx_sentence_updated_at ON sentence (updated_at);
 
-CREATE TABLE sentence_version (
+CREATE TABLE sentence_history (
     id BIGINT,
     version SMALLINT NOT NULL,
     created_at TIMESTAMP NOT NULL,
@@ -21,7 +21,7 @@ BEGIN
     NEW.version = OLD.version + 1;
     NEW.updated_at = NOW();
 
-    INSERT INTO sentence_version
+    INSERT INTO sentence_history
         (id, version, created_at, text)
     VALUES
         (OLD.id, OLD.version, NEW.updated_at, OLD.text);
