@@ -13,6 +13,10 @@ Kumou is a Rust-based project using Dioxus 0.7 for web applications. The reposit
 - **Applications** (`apps/`): Dioxus-based web applications
   - `dialogue`: A fullstack Dioxus 0.7 app with routing and server functions
 
+## Tools Usage
+
+Always use Context7 MCP when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
+
 ## Build Commands
 
 This project uses `just` as a command runner. Common commands:
